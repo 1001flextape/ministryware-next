@@ -10,6 +10,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz'; // More button icon
 import { useRouter } from 'next/navigation';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { usePathname } from 'next/navigation';
 
 // Styled Bottom Navigation
 const StyledBottomNavigation = styled(BottomNavigation)(({ theme }) => ({
@@ -44,13 +45,15 @@ const StyledBottomNavigationAction = styled(BottomNavigationAction)(({ theme }) 
 
 const BottomNav = () => {
   const theme = useTheme();
-  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down('md'));
   const router = useRouter();
+  const pathname = usePathname()
+
+  const isTabletOrMobile = useMediaQuery(theme.breakpoints.down('md'));
   const [value, setValue] = React.useState(0);
 
   // Update tab selection based on the current path
   useEffect(() => {
-    const currentPath = router.pathname;
+    const currentPath = pathname;
     switch (currentPath) {
       case "/":
         setValue(0);
@@ -70,6 +73,11 @@ const BottomNav = () => {
       default:
         setValue(0);
     }
+    
+    if (pathname.substring(0, 5) === "/more") {
+      setValue(4)
+    }
+
   }, [router.pathname]);
 
   if (!isTabletOrMobile) return null;

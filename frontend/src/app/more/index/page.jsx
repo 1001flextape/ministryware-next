@@ -14,7 +14,7 @@ const MorePage = () => {
 
   // Function to navigate to the detailed case study page
   const navigateToCaseStudy = () => {
-    router.push("/case-studies/homeless-app-digitalization");
+    router.push("/more/case-studies/homeless-app-digitalization");
   };
 
   return (
@@ -28,9 +28,9 @@ const MorePage = () => {
       </Head>
 
       <Branding />
+      <br/>
       <div
         style={{
-
           maxWidth: 'var(--size-content)', // Limit the width for the content
           margin: '0 auto',
         }}
@@ -76,7 +76,7 @@ const MorePage = () => {
         </Box>
 
         {/* Case Studies Section */}
-        <Box sx={{ padding: "20px", borderRadius:0 }}>
+        <Box sx={{ padding: "20px", borderRadius: 0 }}>
           <Typography variant="h4">Case Studies</Typography>
           <div
             style={{

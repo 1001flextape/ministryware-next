@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
@@ -10,6 +10,7 @@ import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import { AppBar, Typography, Tabs, Tab, Toolbar, Box, IconButton, Menu, MenuItem, Button, styled } from '@mui/material';
 import { useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import logo from "../../../public/images/ministry-ware-logo.png";
@@ -27,7 +28,7 @@ const BrandingText = styled(Typography)({
 
 // Styled Tabs
 const StyledTabs = styled(Tabs)(({ theme }) => ({
-  marginLeft: '20px', // Added margin to space it out from the logo
+  marginLeft: '20px',
   '& .MuiTab-root': {
     color: '#DAECF3',
     textTransform: 'none',
@@ -47,9 +48,14 @@ const TopNav = () => {
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up('md'));
   const router = useRouter();
-  const [value, setValue] = useState(undefined);
+  const pathname = usePathname();
+
+  // Ensure the router is available
+  if (!router) return null;
+
+  const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [isSignedIn, setIsSignedIn] = useState(false); // Simulate user state
+  const [isSignedIn, setIsSignedIn] = useState(false);
 
   const open = Boolean(anchorEl);
 
@@ -69,7 +75,8 @@ const TopNav = () => {
 
   // Update tab selection based on the current path
   useEffect(() => {
-    switch (router.pathname) {
+    console.log('!!!!!pathname', pathname, router);
+    switch (pathname) {
       case '/':
         setValue(0);
         break;
@@ -82,40 +89,36 @@ const TopNav = () => {
       case '/sponsor':
         setValue(3);
         break;
+      case '/more/index':
+        setValue(4);
+        break;
       default:
-        setValue(0);
+        setValue(null);
     }
-  }, [router.pathname]);
+
+    if (pathname.substring(0, 5) === "/more") {
+      setValue(4)
+    }
+
+  }, [router]);
 
   // Conditionally render the top nav only on desktop
   if (!isDesktop) return null;
 
   return (
     <StyledAppBar position="static">
-      <Toolbar
-        style={{
-          margin: '0 auto',
-          padding: '0 var(--size-gutter)',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
-          maxWidth: 'var(--size-content)',
-        }}
-      >
+      <Toolbar style={{ margin: '0 auto', padding: '0 var(--size-gutter)', display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%', maxWidth: 'var(--size-content)' }}>
         {/* Logo and Branding */}
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Image src={logo} alt="MinistryWare logo" width={30} height={30} />
+          <Image src={logo} alt="MinistryWare logo" width={30} height={30} style={{ margin: 0 }} />
           <BrandingText variant="h6" component="div" sx={{ lineHeight: '35px', ml: 1 }}>
             MinistryWare
           </BrandingText>
 
-          {/* Tabs, positioned to the right of the branding */}
           <StyledTabs
             value={value}
             onChange={(event, newValue) => {
               setValue(newValue);
-              // Navigate to corresponding page
               switch (newValue) {
                 case 0:
                   router.push('/');
@@ -130,7 +133,7 @@ const TopNav = () => {
                   router.push('/sponsor');
                   break;
                 case 4:
-                  router.push('/more'); // Placeholder for more button
+                  router.push('/more/index');
                   break;
                 default:
                   router.push('/');
@@ -182,7 +185,7 @@ const TopNav = () => {
           ) : (
             <Button
               color="inherit"
-              onClick={() => setIsSignedIn(true)} // Simulate sign-in
+              onClick={() => setIsSignedIn(true)}
               variant="outlined"
               sx={{
                 textTransform: 'none',
