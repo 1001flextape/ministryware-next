@@ -8,7 +8,6 @@ import logo from "../../public/images/ministry-ware-logo.png"; // Ensure the ima
 // Styled components for branding
 const BrandingContainer = styled(Box)({
   display: 'flex',
-  alignItems: 'center',
   gap: '10px',
   cursor: 'pointer',
   paddingLeft: "24px",
@@ -18,6 +17,7 @@ const BrandingContainer = styled(Box)({
 const BrandingText = styled(Typography)({
   WebkitTextStroke: '1px rgba(0, 0, 0, 0.7)', // Text stroke effect
   fontWeight: 'bold',
+  alignItems: 'center',
 });
 
 const Branding = ({ onClick }) => {
