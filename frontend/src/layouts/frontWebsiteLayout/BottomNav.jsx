@@ -5,7 +5,8 @@ import { BottomNavigation, BottomNavigationAction, styled } from '@mui/material'
 import ArcadeIcon from '@mui/icons-material/Gamepad';
 import SoftwareIcon from '@mui/icons-material/Business';
 import AboutIcon from '@mui/icons-material/Info';
-import DonateIcon from '@mui/icons-material/AttachMoney';
+import LoyaltyIcon from '@mui/icons-material/Loyalty';
+import MoreHorizIcon from '@mui/icons-material/MoreHoriz'; // More button icon
 import { useRouter } from 'next/navigation';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
@@ -49,7 +50,7 @@ const BottomNav = () => {
 
   // Update tab selection based on the current path
   useEffect(() => {
-    const currentPath = router.pathname; // Removed pathPrefix
+    const currentPath = router.pathname;
     switch (currentPath) {
       case "/":
         setValue(0);
@@ -62,6 +63,9 @@ const BottomNav = () => {
         break;
       case "/donate":
         setValue(3);
+        break;
+      case "/more":
+        setValue(4);
         break;
       default:
         setValue(0);
@@ -78,8 +82,9 @@ const BottomNav = () => {
       '/church-software',
       '/about',
       '/donate',
+      '/more', // Added the path for "More"
     ];
-    router.push(paths[newValue]); // Removed pathPrefix
+    router.push(paths[newValue]);
   };
 
   return (
@@ -90,7 +95,8 @@ const BottomNav = () => {
       <StyledBottomNavigationAction label="Arcade" icon={<ArcadeIcon />} />
       <StyledBottomNavigationAction label="Software" icon={<SoftwareIcon />} />
       <StyledBottomNavigationAction label="About" icon={<AboutIcon />} />
-      <StyledBottomNavigationAction label="Donate" icon={<DonateIcon />} />
+      <StyledBottomNavigationAction label="Donate" icon={<LoyaltyIcon />} />
+      <StyledBottomNavigationAction label="More" icon={<MoreHorizIcon />} /> {/* More button */}
     </StyledBottomNavigation>
   );
 };
