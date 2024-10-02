@@ -39,6 +39,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   color: var(--color-text);
+  background-color: #f9f9f9;
   font-family: 'Inter', sans-serif;
 
   /* font-family: sans-serif; */

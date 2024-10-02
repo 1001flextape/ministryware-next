@@ -36,7 +36,7 @@ const MorePage = () => {
         }}
       >
         {/* Apps Section */}
-        <Box sx={{ padding: "20px", backgroundColor: "#f9f9f9", borderRadius: 0 }}>
+        <Box sx={{ padding: "20px", borderRadius: 0 }}>
           <Typography variant="h4">Apps</Typography>
           <div
             style={{
@@ -76,7 +76,7 @@ const MorePage = () => {
         </Box>
 
         {/* Case Studies Section */}
-        <Box sx={{ padding: "20px", backgroundColor: "#f9f9f9", borderRadius:0 }}>
+        <Box sx={{ padding: "20px", borderRadius:0 }}>
           <Typography variant="h4">Case Studies</Typography>
           <div
             style={{
