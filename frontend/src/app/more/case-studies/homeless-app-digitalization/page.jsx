@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import Layout from "../../../../layouts/frontWebsiteLayout/layout";
 import { Box, Container, Typography, Button, Breadcrumbs, Link } from '@mui/material';
 import { styled } from '@mui/system';
@@ -42,6 +42,72 @@ const ButtonStyled = styled(Button)(({ theme }) => ({
 }));
 
 const CaseStudy = () => {
+  
+  const handleFullScreenIframe = () => {
+    const iframeSourceUrl = "/more/case-studies/homeless-app-digitalization/preview"; // Replace with actual URL
+
+    // Create an iframe element
+    const iframe = document.createElement('iframe');
+    iframe.src = iframeSourceUrl;
+    iframe.style.position = 'fixed';
+    iframe.style.top = '0';
+    iframe.style.left = '0';
+    iframe.style.width = '100vw';
+    iframe.style.height = '100vh';
+    iframe.style.border = 'none';
+    iframe.style.zIndex = '9999';
+
+    // Create an exit button
+    const exitButton = document.createElement('button');
+    exitButton.innerText = "Exit";
+    exitButton.style.position = 'absolute';
+    exitButton.style.top = '10px';
+    exitButton.style.right = '20px';
+    exitButton.style.zIndex = '10000';
+    exitButton.style.padding = '10px 20px';
+    exitButton.style.backgroundColor = '#007BFF';
+    exitButton.style.color = '#fff';
+    exitButton.style.border = 'none';
+    exitButton.style.cursor = 'pointer';
+    exitButton.style.fontSize = '16px';
+
+    // Append iframe and exit button to the body
+    document.body.appendChild(iframe);
+    document.body.appendChild(exitButton);
+
+    // Request full-screen mode for the iframe
+    iframe.requestFullscreen().catch(err => {
+      console.error("Error attempting to enable full-screen mode:", err);
+    });
+
+    // Event listener to close the iframe and exit fullscreen
+    const closeIframe = () => {
+      document.exitFullscreen();
+      iframe.remove();
+      exitButton.remove();
+    };
+
+    // Attach click event to the exit button
+    exitButton.addEventListener('click', closeIframe);
+
+    // Listen for the 'Esc' key to close the iframe
+    const handleEscapeKey = (event) => {
+      if (event.key === "Escape") {
+        closeIframe();
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscapeKey);
+
+    // Clean up the event listener when the iframe is closed
+    iframe.addEventListener('fullscreenchange', () => {
+      if (!document.fullscreenElement) {
+        closeIframe();
+        document.removeEventListener('keydown', handleEscapeKey);
+      }
+    });
+  };
+
   return (
     <Layout>
       <div style={{
@@ -89,7 +155,7 @@ const CaseStudy = () => {
             <Typography>
               A fully interactive experience awaits. See how the app streamlines paperwork without needing to download anything.
             </Typography>
-            <ButtonStyled>
+            <ButtonStyled onClick={handleFullScreenIframe}>
               No Download. Instant App Preview.
             </ButtonStyled>
           </Section>
