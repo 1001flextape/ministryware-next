@@ -15,6 +15,11 @@ const PreviewPage = () => {
     setShowPhoneFrame(!isMobile);
   }, [isMobile]);
 
+  // Determine the iframe URL based on the environment
+  const iframeUrl = process.env.NODE_ENV === 'development' 
+    ? "http://localhost:8000"
+    : "/public/homeless-app-digitalization-example/index.html"; // Prod build path
+
   return (
     <Box
       sx={{
@@ -43,7 +48,7 @@ const PreviewPage = () => {
         >
           {/* Inner iframe representing the app preview */}
           <iframe
-            src="/more/case-studies/homeless-app-digitalization/preview/inner-preview"
+            src={iframeUrl}
             style={{
               width: '100%',
               height: '100%',
@@ -57,7 +62,7 @@ const PreviewPage = () => {
       {showPhoneFrame === false && (
         // Fullscreen iframe on mobile
         <iframe
-          src="/more/case-studies/homeless-app-digitalization/preview/inner-preview"
+          src={iframeUrl}
           style={{ width: '100vw', height: '100vh', border: 'none' }}
           title="App Preview"
         />
