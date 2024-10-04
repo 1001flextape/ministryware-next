@@ -130,7 +130,7 @@ const TopNav = () => {
                   router.push('/about');
                   break;
                 case 3:
-                  router.push('/sponsor');
+                  router.push('/sponsors');
                   break;
                 case 4:
                   router.push('/more/index');
@@ -143,7 +143,7 @@ const TopNav = () => {
             <Tab icon={<ArcadeIcon />} label="Arcade" />
             <Tab icon={<SoftwareIcon />} label="Software" />
             <Tab icon={<AboutIcon />} label="About" />
-            <Tab icon={<LoyaltyIcon />} label="Sponsor" />
+            <Tab icon={<LoyaltyIcon />} label="Sponsors" />
             <Tab icon={<MoreHorizIcon />} label="More" />
           </StyledTabs>
         </Box>

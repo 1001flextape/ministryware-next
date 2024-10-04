@@ -49,7 +49,7 @@ const BottomNav = () => {
   const pathname = usePathname()
 
   const isTabletOrMobile = useMediaQuery(theme.breakpoints.down('md'));
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] = React.useState(null);
 
   // Update tab selection based on the current path
   useEffect(() => {
@@ -64,7 +64,7 @@ const BottomNav = () => {
       case "/about":
         setValue(2);
         break;
-      case "/donate":
+      case "/sponsors":
         setValue(3);
         break;
       case "/more":
@@ -73,9 +73,13 @@ const BottomNav = () => {
       default:
         setValue(0);
     }
-    
+
     if (pathname.substring(0, 5) === "/more") {
       setValue(4)
+    }
+
+    if (pathname.substring(0, 7) === "/arcade") {
+      setValue(0)
     }
 
   }, [router.pathname]);
@@ -89,21 +93,22 @@ const BottomNav = () => {
       '/',
       '/church-software',
       '/about',
-      '/donate',
-      '/more', // Added the path for "More"
+      '/sponsors',
+      '/more/index', // Added the path for "More"
     ];
     router.push(paths[newValue]);
   };
 
   return (
     <StyledBottomNavigation
+      showLabels
       value={value}
       onChange={(event, newValue) => handleNavigation(newValue)}
     >
       <StyledBottomNavigationAction label="Arcade" icon={<ArcadeIcon />} />
       <StyledBottomNavigationAction label="Software" icon={<SoftwareIcon />} />
       <StyledBottomNavigationAction label="About" icon={<AboutIcon />} />
-      <StyledBottomNavigationAction label="Donate" icon={<LoyaltyIcon />} />
+      <StyledBottomNavigationAction label="Sponsors" icon={<LoyaltyIcon />} />
       <StyledBottomNavigationAction label="More" icon={<MoreHorizIcon />} /> {/* More button */}
     </StyledBottomNavigation>
   );
