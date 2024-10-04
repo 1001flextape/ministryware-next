@@ -165,8 +165,8 @@ const CaseStudy = () => {
             <Typography variant="h6">Case Study Results</Typography>
             <Typography>Before and After Comparison:</Typography>
             <Box sx={{ display: 'flex', justifyContent: 'space-around', my: 4 }}>
-              <img src="before-image.jpg" alt="Before: Paper-based Process" style={{ maxWidth: '45%' }} />
-              <img src="after-image.jpg" alt="After: Digital App Process" style={{ maxWidth: '45%' }} />
+              <img src="/images/homeless-app-paperwork.jpg" alt="Before: Paper-based Process" style={{ maxWidth: '45%' }} />
+              <img src="/images/homeless-app.jpg" alt="After: Digital App Process" style={{ maxWidth: '45%' }} />
             </Box>
           </Section>
 
