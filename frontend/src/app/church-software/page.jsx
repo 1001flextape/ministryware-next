@@ -6,7 +6,7 @@ import Head from "next/head";
 import { Box, Typography, Button, Container } from '@mui/material';
 
 const ChurchSoftwarePage = () => (
-  <Layout>
+  <Layout title={"Church Software"}>
     {/* SEO Head */}
     <Head>
       <title>Church Software | MinistryWare</title>

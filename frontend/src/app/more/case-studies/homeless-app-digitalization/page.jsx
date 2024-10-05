@@ -43,7 +43,7 @@ const ButtonStyled = styled(Button)(({ theme }) => ({
 }));
 
 const CaseStudy = () => {
-  
+
   const handleFullScreenIframe = () => {
     const iframeSourceUrl = "/more/case-studies/homeless-app-digitalization/preview"; // Replace with actual URL
 
@@ -97,7 +97,7 @@ const CaseStudy = () => {
         closeIframe();
       }
     };
-    
+
     document.addEventListener('keydown', handleEscapeKey);
 
     // Clean up the event listener when the iframe is closed
@@ -110,7 +110,7 @@ const CaseStudy = () => {
   };
 
   return (
-    <Layout>
+    <Layout title="Homeless Resources App">
       <div style={{
 
         maxWidth: 'var(--size-content)', // Limit the width for the content
@@ -147,7 +147,7 @@ const CaseStudy = () => {
               <li>Real-Time Updates: Information is available instantly across all devices.</li>
               <li>User-Friendly Interface: Streamlines data entry and reduces errors.</li>
               <li>Interoperability: Allows sharing of data between different agencies without delays.</li>
-              <li>Customizable Reports: MKDocs-generated documents allow for quick adjustments and output.</li>
+              <li>Customizable Reports: quick adjustments and output.</li>
             </ul>
           </Section>
 
@@ -177,12 +177,12 @@ const CaseStudy = () => {
             </Typography>
           </Section>
         </CaseStudyContainer>
-        <LeadCaptureForm/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
-        <br/>
+        <LeadCaptureForm />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
     </Layout>
   );

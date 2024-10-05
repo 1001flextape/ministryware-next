@@ -8,9 +8,9 @@ import Head from "next/head";
 
 const AboutPage = () => {
   return (
-    <Layout>
+    <Layout title={"About"}>
       <Head>
-        <title>About | MinistryWare</title>
+        {/* <title>About | MinistryWare</title> */}
         <meta name="description" content="Learn more about MinistryWare's mission, values, and innovative solutions." />
       </Head>
       <AboutHero />

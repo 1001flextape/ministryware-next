@@ -18,7 +18,7 @@ const MorePage = () => {
   };
 
   return (
-    <Layout>
+    <Layout title={"More"}>
       <Head>
         <title>More | MinistryWare</title>
         <meta
@@ -28,7 +28,7 @@ const MorePage = () => {
       </Head>
 
       <Branding />
-      <br/>
+      <br />
       <div
         style={{
           maxWidth: 'var(--size-content)', // Limit the width for the content

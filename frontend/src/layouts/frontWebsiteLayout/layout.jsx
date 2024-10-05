@@ -19,11 +19,13 @@ const siteMetadata = {
 //   description: siteMetadata.description,
 // };
 
-const Layout = ({ children }) => {
+const Layout = ({ title, children }) => {
+  console.log('adding title:', title)
   return (
     <ThemeProvider theme={theme}>
       <html lang="en">
         <head>
+          <title>{`${title} - MinistryWare`}</title>
           {/* Meta and Favicons */}
           <meta name="description" content={siteMetadata.description} />
           <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />

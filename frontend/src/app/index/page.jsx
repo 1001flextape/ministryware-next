@@ -5,7 +5,7 @@ import ArcadeHomeList from "../components/pages/arcade-home/ArcadeHomeList";
 import Head from "next/head";
 
 const IndexPage = () => (
-  <Layout>
+  <Layout title={"Arcade"}>
     {/* SEO Head */}
     <Head>
       <title>Home | MinistryWare</title>
