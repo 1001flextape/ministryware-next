@@ -53,7 +53,7 @@ const TopNav = () => {
   // Ensure the router is available
   if (!router) return null;
 
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [isSignedIn, setIsSignedIn] = useState(false);
 

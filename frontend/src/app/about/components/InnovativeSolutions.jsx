@@ -4,7 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { Box, Typography, Grid, Container } from '@mui/material';
 import { styled, useTheme, keyframes } from '@mui/system';
 import { useInView } from 'react-intersection-observer';
-import churchImage from '../../../../public/images/church-technology.jpg'; // Example image
+// import churchImage from '../../../../public/images/church-technology.jpg'; // Example image
 
 // Fade-in keyframe
 const fadeIn = keyframes`
@@ -26,7 +26,7 @@ const SolutionsSection = styled(Box)(({ theme }) => ({
 
 // Image Box Styling
 const ImageBox = styled(Box)(({ theme }) => ({
-  backgroundImage: `url(${churchImage})`,
+  backgroundImage: `url(/images/church-technology.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   height: '300px',

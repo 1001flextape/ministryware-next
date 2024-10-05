@@ -14,7 +14,7 @@ const HeroSection = styled(Box)(({ theme }) => ({
   display: 'flex',
   alignItems: 'center', // Align vertically center for better appearance
   height: '100vh', // Full height for hero
-  backgroundImage: `url(${backgroundImage})`,
+  backgroundImage: `url(/images/woman-prayer-hero-compress.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   color: '#fff',
@@ -34,7 +34,7 @@ const StyledBackground = styled(Box)(({ theme }) => ({
   left: '50%',
   width: 'var(--size-content)', // Limit the content width
   height: '100%',
-  backgroundImage: `url(${backgroundImage})`,
+  backgroundImage: `url(/images/woman-prayer-hero-compress.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   transform: 'translateX(-50%)', // Center the image
