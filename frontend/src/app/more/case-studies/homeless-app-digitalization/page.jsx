@@ -13,7 +13,7 @@ const CaseStudyContainer = styled(Container)(({ theme }) => ({
   padding: '40px',
   borderRadius: 0,
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  maxWidth: '800px',
+  maxWidth: "var(--size-content)",
   margin: 'auto',
 }));
 

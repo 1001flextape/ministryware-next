@@ -33,7 +33,7 @@ function ChurchSoftwareHero2() {
           <clipPath id="computer-clip">
             <use href="#computer-cover" overflow="hidden" />
           </clipPath>
-          <g clip-path="url(#computer-clip)">
+          <g clipPath="url(#computer-clip)">
             <g id="computer">
               <g id="screen">
                 <g id="corner-top-right">
@@ -43,7 +43,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_2_">
                     <use href="#SVGID_1_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_2_)">
+                  <g clipPath="url(#SVGID_2_)">
                     <path fill="#C7C8CA" d="M241.4,12.2l-4.5-2.6c0.3-0.1,0.5-0.3,0.8-0.4l4.5,2.6C241.9,11.9,241.7,12,241.4,12.2" />
                     <path fill="#C3C4C6" d="M242.2,11.8l-4.5-2.6c0.2-0.1,0.4-0.2,0.6-0.2l4.5,2.6C242.6,11.6,242.4,11.7,242.2,11.8" />
                     <path fill="#BFC0C2" d="M242.8,11.6l-4.5-2.6c0.2,0,0.3-0.1,0.5-0.1l4.5,2.6C243.1,11.5,243,11.5,242.8,11.6" />
@@ -64,7 +64,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_4_">
                     <use href="#SVGID_3_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_4_)">
+                  <g clipPath="url(#SVGID_4_)">
                     <path fill="#909294" d="M16.3,315.7l-4.5-2.6c-1-0.6-1.6-1.8-1.6-3.5l4.5,2.6C14.7,313.9,15.4,315.1,16.3,315.7" />
                   </g>
                 </g>
@@ -80,7 +80,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_6_">
                     <use href="#SVGID_5_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_6_)">
+                  <g clipPath="url(#SVGID_6_)">
                     <path fill="#909294" d="M14.3,149.6L9.8,147c0-0.3,0-0.7,0.1-1.1l4.5,2.6C14.3,148.9,14.3,149.3,14.3,149.6" />
                     <path fill="#949598" d="M14.3,148.6l-4.5-2.6c0-0.3,0.1-0.5,0.1-0.8l4.5,2.6C14.4,148.1,14.4,148.3,14.3,148.6" />
                     <path fill="#98999C" d="M14.5,147.8l-4.5-2.6c0-0.2,0.1-0.4,0.2-0.6l4.5,2.6C14.6,147.4,14.5,147.6,14.5,147.8" />
@@ -106,10 +106,10 @@ function ChurchSoftwareHero2() {
                   <defs>
                     <path id="code-cover-screen-1" d="m26.5,210l209.5,-118.5l2,89l-213,123l1.5,-93.5z" />
                   </defs>
-                  <clipPath id="clip-path-screen-2">
+                  <clipPath id="clipPath-screen-2">
                     <use href="#code-cover-screen-1" overflow="hidden" />
                   </clipPath>
-                  <g clip-path="url(#clip-path-screen-2">
+                  <g clipPath="url(#clipPath-screen-2">
                     <g id="scrolling-code">
                       <polygon className="code line-1" fill="#7D7E7E" points="93.9,176.3 93.9,182.2 56.6,203.8 56.5,197.9" />
                       <polygon className="code line-1" fill="#3B963D" points="47.6,203 47.7,208.9 34.6,216.4 34.6,210.5" />
@@ -154,7 +154,7 @@ function ChurchSoftwareHero2() {
                     </g>
                   </g>
 
-                  <g clip-path="url(#clip-path-screen-2">
+                  <g clipPath="url(#clipPath-screen-2">
                     <g id="scrolling-code-2">
                       <polygon className="code line-1" fill="#7D7E7E" points="93.9,176.3 93.9,182.2 56.6,203.8 56.5,197.9" />
                       <polygon className="code line-1" fill="#3B963D" points="47.6,203 47.7,208.9 34.6,216.4 34.6,210.5" />
@@ -253,10 +253,10 @@ function ChurchSoftwareHero2() {
                   <defs>
                     <path id="code-cover-screen-0" d="M239.6,23.2c0-2.3-0.4-2.3-1.7-1.6c-0.5,0.3-1.2,0.7-2,1.2l-211.3,122c-0.8,0.5-1.3,0.7-1.7,0.9 c-0.8,0.5-0.5,0.6-0.5,2.9L22.9,302c0,2.2-0.3,2.7,0.5,2.3c0.3-0.2,0.9-0.6,1.7-1l212-122.4c0.8-0.5,1.4-0.8,1.8-1 c1-0.6,1.1-1,1.1-3.2L239.6,23.2z" />
                   </defs>
-                  <clipPath id="clip-path-screen">
+                  <clipPath id="clipPath-screen">
                     <use href="#code-cover-screen-0" overflow="hidden" />
                   </clipPath>
-                  <g clip-path="url(#clip-path-screen)">
+                  <g clipPath="url(#clipPath-screen)">
                     <path id="code-cover-screen" fill="#11191A" d="M239.6,23.2c0-2.3-0.4-2.3-1.7-1.6c-0.5,0.3-1.2,0.7-2,1.2l-211.3,122c-0.8,0.5-1.3,0.7-1.7,0.9 c-0.8,0.5-0.5,0.6-0.5,2.9L22.9,302c0,2.2-0.3,2.7,0.5,2.3c0.3-0.2,0.9-0.6,1.7-1l212-122.4c0.8-0.5,1.4-0.8,1.8-1 c1-0.6,1.1-1,1.1-3.2L239.6,23.2z" />
                   </g>
                 </g>
@@ -278,7 +278,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_8_">
                     <use href="#SVGID_7_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_8_)">
+                  <g clipPath="url(#SVGID_8_)">
                     <path fill="#9B9D9F" d="M397.2,268.3l0,7.3c0,0,0,0,0,0.1L397.2,268.3C397.2,268.3,397.2,268.3,397.2,268.3" />
                     <path fill="#9FA1A3" d="M397.2,268.3l0,7.3c0,0.2,0,0.3-0.1,0.5l0-7.3C397.2,268.6,397.2,268.5,397.2,268.3" />
                     <path fill="#A3A5A7" d="M397.1,268.8l0,7.3c0,0.1-0.1,0.3-0.1,0.4l0-7.3C397.1,269.1,397.1,268.9,397.1,268.8" />
@@ -296,7 +296,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_10_">
                     <use href="#SVGID_9_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_10_)">
+                  <g clipPath="url(#SVGID_10_)">
                     <path fill="#909294" d="M16.8,321.1l0,7.3c-1.5-0.9-2.3-2.1-2.3-3.2l0-7.3C14.5,319,15.2,320.2,16.8,321.1" />
                   </g>
                 </g>
@@ -310,7 +310,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_12_">
                     <use href="#SVGID_11_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_12_)">
+                  <g clipPath="url(#SVGID_12_)">
                     <path fill="#B7B9BA" d="M169.2,402.6l0,7.3c-0.5,0.3-1.1,0.6-1.7,0.7l0-7.3C168.1,403.2,168.6,402.9,169.2,402.6" />
                     <path fill="#B3B5B6" d="M167.5,403.4l0,7.3c-0.5,0.2-1,0.3-1.5,0.4l0-7.3C166.5,403.7,167,403.5,167.5,403.4" />
                     <path fill="#AFB1B3" d="M166,403.8l0,7.3c-0.3,0.1-0.7,0.1-1,0.1l0-7.3C165.3,403.9,165.6,403.8,166,403.8" />
@@ -334,7 +334,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_14_">
                     <use href="#SVGID_13_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_14_)">
+                  <g clipPath="url(#SVGID_14_)">
                     <polyline fill="#6E6F6F" points="306.5,310.4 306.5,311.3 306.5,311.3 306.5,310.4 306.5,310.4" />
                     <path fill="#707172" d="M306.5,310.4l0,0.8c0,0,0,0.1,0,0.1L306.5,310.4C306.5,310.5,306.5,310.5,306.5,310.4" />
                     <path fill="#737475" d="M306.5,310.5l0,0.8c0,0,0,0.1,0,0.1L306.5,310.5C306.5,310.6,306.5,310.6,306.5,310.5" />
@@ -352,7 +352,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_16_">
                     <use href="#SVGID_15_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_16_)">
+                  <g clipPath="url(#SVGID_16_)">
                     <path fill="#656667" d="M193.8,323.3l0,0.8c-0.3-0.2-0.5-0.4-0.5-0.7l0-0.8C193.3,322.9,193.4,323.2,193.8,323.3" />
                   </g>
                 </g>
@@ -366,7 +366,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_18_">
                     <use href="#SVGID_17_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_18_)">
+                  <g clipPath="url(#SVGID_18_)">
                     <path fill="#828283" d="M240.6,349.1l0,0.8c-0.1,0.1-0.2,0.1-0.4,0.2l0-0.8C240.4,349.2,240.5,349.2,240.6,349.1" />
                     <path fill="#7F7F80" d="M240.3,349.2l0,0.8c-0.1,0-0.2,0.1-0.3,0.1l0-0.8C240.1,349.3,240.2,349.3,240.3,349.2" />
                     <path fill="#7C7D7D" d="M240,349.3l0,0.8c-0.1,0-0.1,0-0.2,0l0-0.8C239.8,349.3,239.9,349.3,240,349.3" />
@@ -387,7 +387,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_20_">
                     <use href="#SVGID_19_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_20_)">
+                  <g clipPath="url(#SVGID_20_)">
                     <path fill="#909294" d="M261.1,344.6l0-1.6c0-0.3,0.2-0.6,0.5-0.9l0,1.6C261.3,344,261.1,344.3,261.1,344.6" />
                     <path fill="#949598" d="M261.6,343.7l0-1.6c0,0,0.1-0.1,0.1-0.1l0,1.6C261.7,343.6,261.6,343.7,261.6,343.7" />
                     <path fill="#98999C" d="M261.7,343.6l0-1.6c0,0,0.1-0.1,0.1-0.1l0,1.6C261.8,343.5,261.8,343.6,261.7,343.6" />
@@ -402,7 +402,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_22_">
                     <use href="#SVGID_21_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_22_)">
+                  <g clipPath="url(#SVGID_22_)">
                     <path fill="#DFDFE0" d="M297.5,325l0-1.6c0,0,0.1,0,0.1,0L297.5,325C297.5,325,297.5,325,297.5,325" />
                     <path fill="#DBDBDC" d="M297.5,325.1l0-1.6c0,0,0.1,0,0.1,0.1L297.5,325.1C297.6,325.1,297.6,325.1,297.5,325.1" />
                     <path fill="#D7D8D9" d="M297.6,325.1l0-1.6c0,0,0.1,0,0.1,0.1L297.6,325.1C297.7,325.2,297.7,325.1,297.6,325.1" />
@@ -431,7 +431,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_24_">
                     <use href="#SVGID_23_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_24_)">
+                  <g clipPath="url(#SVGID_24_)">
                     <path fill="#9B9D9F" d="M293.7,325l0-1.6c0,0,0.1,0,0.1-0.1l0,1.6C293.8,325,293.7,325,293.7,325" />
                     <path fill="#9FA1A3" d="M293.8,325l0-1.6c0,0,0.1,0,0.1-0.1l0,1.6C293.9,324.9,293.8,324.9,293.8,325" />
                     <path fill="#A3A5A7" d="M293.9,324.9l0-1.6c0,0,0.1,0,0.1,0l0,1.6C294,324.9,293.9,324.9,293.9,324.9" />
@@ -469,7 +469,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_26_">
                     <use href="#SVGID_25_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_26_)">
+                  <g clipPath="url(#SVGID_26_)">
                     <path fill="#494A4A" d="M315.3,243.2l0,0.8c0,0,0,0,0,0L315.3,243.2C315.3,243.2,315.3,243.2,315.3,243.2" />
                     <path fill="#4A4B4B" d="M315.3,243.3l0,0.8c0,0.1,0,0.1,0,0.2l0-0.8C315.3,243.4,315.3,243.3,315.3,243.3" />
                     <path fill="#4B4C4C" d="M315.3,243.4l0,0.8c0,0.1,0,0.1-0.1,0.2l0-0.8C315.2,243.6,315.2,243.5,315.3,243.4" />
@@ -487,7 +487,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_28_">
                     <use href="#SVGID_27_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_28_)">
+                  <g clipPath="url(#SVGID_28_)">
                     <path fill="#464747" d="M62.7,311.3l0,0.8c-0.6-0.4-1-0.9-1-1.3l0-0.8C61.7,310.5,62,311,62.7,311.3" />
                   </g>
                 </g>
@@ -501,7 +501,7 @@ function ChurchSoftwareHero2() {
                   <clipPath id="SVGID_30_">
                     <use href="#SVGID_29_" overflow="visible" />
                   </clipPath>
-                  <g clip-path="url(#SVGID_30_)">
+                  <g clipPath="url(#SVGID_30_)">
                     <path fill="#515152" d="M133.6,349.6l0,0.8c-0.2,0.1-0.5,0.2-0.7,0.3l0-0.8C133.1,349.8,133.3,349.7,133.6,349.6" />
                     <path fill="#505050" d="M132.8,349.9l0,0.8c-0.2,0.1-0.4,0.1-0.6,0.2l0-0.8C132.4,350,132.7,350,132.8,349.9" />
                     <path fill="#4E4F4F" d="M132.2,350.1l0,0.8c-0.1,0-0.3,0-0.4,0.1l0-0.8C132,350.1,132.1,350.1,132.2,350.1" />

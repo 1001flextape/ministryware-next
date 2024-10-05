@@ -3,8 +3,17 @@
 import React from "react";
 import Layout from "../../layouts/frontWebsiteLayout/layout";
 import Head from "next/head";
-import SponsorHero from "./components/SponsorHero";
 import { Box, Typography } from "@mui/material";
+import { styled } from '@mui/system';
+
+const PageContainer = styled(Box)(({ theme }) => ({
+  backgroundColor: '#fff',
+  padding: '40px',
+  borderRadius: 0,
+  boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+  maxWidth: "var(--size-content)",
+  margin: 'auto',
+}));
 
 // Placeholder for the sponsor box
 const SponsorPlaceholder = ({ tier }) => (
@@ -27,7 +36,7 @@ const SponsorPlaceholder = ({ tier }) => (
 
 // Layout for sponsor tiers
 const SponsorSection = () => (
-  <Box sx={{ maxWidth: "var(--size-content)", margin: "auto", padding: "20px" }}>
+  <Box>
     {/* Mega Tier */}
     <Typography variant="h5" sx={{ mb: 2, fontWeight: "bold" }}>
       Mega Sponsors
@@ -82,8 +91,10 @@ const IndexPage = () => (
       <title>Sponsors | MinistryWare</title>
       <meta name="description" content="Welcome to MinistryWare's Sponsor Page. Learn about our sponsors and how to become one." />
     </Head>
-    <SponsorHero />
-    <SponsorSection />
+    {/* <SponsorHero /> */}
+    <PageContainer>
+      <SponsorSection />
+    </PageContainer>
   </Layout>
 );
 
