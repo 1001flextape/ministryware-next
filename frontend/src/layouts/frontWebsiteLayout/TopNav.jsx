@@ -86,7 +86,7 @@ const TopNav = () => {
       case '/about':
         setValue(2);
         break;
-      case '/sponsor':
+      case '/sponsors':
         setValue(3);
         break;
       case '/more/index':

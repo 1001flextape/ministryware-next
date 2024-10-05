@@ -4,18 +4,21 @@ import { styled } from '@mui/system';
 import Branding from "../../../components/Branding"
 
 // Styled container for hero section
-const HeroContainer = styled(Box)({
-  backgroundImage: 'url(/images/donation-hero-wide.jpg)', // Path to your background image
+const HeroContainer = styled(Box)(({ theme }) => ({
+  // backgroundImage: 'url(/images/donation-hero-wide.jpg)', // Path to your background image
   backgroundSize: 'cover',
   backgroundPosition: 'center',
-  height: '150px', // Adjust height as needed
+  // height: '80px', // Adjust height as needed
   display: 'block',
   flexDirection: 'column',
   justifyContent: 'center', // Vertically centers the content
   alignItems: 'center', // Horizontally centers the content
   // paddingTop: '50px', // Space for branding on top
   textAlign: 'center', // Centers text content
-});
+  [theme.breakpoints.up('md')]: {
+    marginTop: "15px",
+  }
+}));
 
 // Styling for the content wrapper
 const ContentWrapper = styled(Box)({

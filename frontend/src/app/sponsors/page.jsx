@@ -76,7 +76,7 @@ const SponsorSection = () => (
 );
 
 const IndexPage = () => (
-  <Layout>
+  <Layout title={"Sponsors"}>
     {/* SEO Head */}
     <Head>
       <title>Sponsors | MinistryWare</title>
