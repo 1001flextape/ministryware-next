@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, LinearProgress, Typography, styled } from '@mui/material';
+import { Box, LinearProgress, Typography, styled, Button } from '@mui/material';
 import Branding from '@/components/Branding';
 
 // Styled components
@@ -8,7 +8,7 @@ const SponsorshipContainer = styled(Box)(({ theme }) => ({
   padding: '20px',
   textAlign: 'center',
   width: '100%',
-  minHeight: '150px',
+  minHeight: '200px',
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center',
@@ -24,11 +24,30 @@ const ProgressBar = styled(LinearProgress)(({ theme }) => ({
   borderRadius: '5px',
 }));
 
+// Point of Sale Button
+const POSButton = styled(Button)(({ theme }) => ({
+  marginTop: '20px',
+  backgroundColor: '#022D41',
+  color: '#ffffff',
+  fontWeight: 'bold',
+  padding: '10px 20px',
+  borderRadius: '25px',
+  '&:hover': {
+    backgroundColor: '#035A74',
+  },
+}));
+
 const SponsorshipProgress = () => {
   const totalSponsorships = 180;
   const remainingSponsorships = 25; // Change this value to show different progress
 
   const progressValue = ((totalSponsorships - remainingSponsorships) / totalSponsorships) * 100;
+
+  // Handle click event for the POS button
+  const handlePOSClick = () => {
+    alert('Redirecting to Point of Sale...');
+    // Logic to handle the POS action can be added here, e.g., navigating to a checkout page
+  };
 
   return (
     <>
@@ -41,6 +60,11 @@ const SponsorshipProgress = () => {
           Hurry! Only {remainingSponsorships} sponsorships left out of {totalSponsorships}.
         </Typography>
         <ProgressBar variant="determinate" value={progressValue} />
+
+        {/* Point of Sale Button */}
+        <POSButton onClick={handlePOSClick}>
+          Purchase Sponsorship
+        </POSButton>
       </SponsorshipContainer>
     </>
   );

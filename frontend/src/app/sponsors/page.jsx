@@ -6,6 +6,7 @@ import Head from "next/head";
 import { Box, Typography } from "@mui/material";
 import { styled } from '@mui/system';
 import SponsorshipProgress from "./components/SponsorshipProgress"
+import POSFloatingButton from "./components/POSFloatingButton";
 
 const PageContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -97,6 +98,7 @@ const IndexPage = () => (
     <PageContainer>
       <SponsorSection />
     </PageContainer>
+    <POSFloatingButton/>
   </Layout>
 );
 
