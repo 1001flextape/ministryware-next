@@ -5,6 +5,7 @@ import Layout from "../../layouts/frontWebsiteLayout/layout";
 import Head from "next/head";
 import { Box, Typography } from "@mui/material";
 import { styled } from '@mui/system';
+import SponsorshipProgress from "./components/SponsorshipProgress"
 
 const PageContainer = styled(Box)(({ theme }) => ({
   backgroundColor: '#fff',
@@ -92,6 +93,7 @@ const IndexPage = () => (
       <meta name="description" content="Welcome to MinistryWare's Sponsor Page. Learn about our sponsors and how to become one." />
     </Head>
     {/* <SponsorHero /> */}
+    <SponsorshipProgress />
     <PageContainer>
       <SponsorSection />
     </PageContainer>
