@@ -80,17 +80,14 @@ const TopNav = () => {
       case '/':
         setValue(0);
         break;
-      case '/church-software':
+      case '/about':
         setValue(1);
         break;
-      case '/about':
+      case '/donate':
         setValue(2);
         break;
-      case '/sponsors':
-        setValue(3);
-        break;
       case '/more/index':
-        setValue(4);
+        setValue(3);
         break;
       default:
         setValue(null);
@@ -119,20 +116,18 @@ const TopNav = () => {
             value={value}
             onChange={(event, newValue) => {
               setValue(newValue);
+              console.log('new selected value', newValue)
               switch (newValue) {
                 case 0:
                   router.push('/');
                   break;
                 case 1:
-                  router.push('/church-software');
-                  break;
-                case 2:
                   router.push('/about');
                   break;
-                case 3:
-                  router.push('/sponsors');
+                case 2:
+                  router.push('/donate');
                   break;
-                case 4:
+                case 3:
                   router.push('/more/index');
                   break;
                 default:
@@ -141,9 +136,8 @@ const TopNav = () => {
             }}
           >
             <Tab icon={<ArcadeIcon />} label="Arcade" />
-            <Tab icon={<SoftwareIcon />} label="Software" />
             <Tab icon={<AboutIcon />} label="About" />
-            <Tab icon={<LoyaltyIcon />} label="Sponsors" />
+            <Tab icon={<LoyaltyIcon />} label="Donate" />
             <Tab icon={<MoreHorizIcon />} label="More" />
           </StyledTabs>
         </Box>

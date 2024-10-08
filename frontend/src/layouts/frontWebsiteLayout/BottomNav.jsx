@@ -58,20 +58,17 @@ const BottomNav = () => {
       case "/":
         setValue(0);
         break;
-      case "/church-software":
+      case "/about":
         setValue(1);
         break;
-      case "/about":
+      case "/donate":
         setValue(2);
         break;
-      case "/sponsors":
+      case "/more":
         setValue(3);
         break;
-      case "/more":
-        setValue(4);
-        break;
       default:
-        setValue(0);
+        setValue(null);
     }
 
     if (pathname.substring(0, 5) === "/more") {
@@ -91,9 +88,8 @@ const BottomNav = () => {
     setValue(newValue);
     const paths = [
       '/',
-      '/church-software',
       '/about',
-      '/sponsors',
+      '/donate',
       '/more/index', // Added the path for "More"
     ];
     router.push(paths[newValue]);
@@ -106,9 +102,8 @@ const BottomNav = () => {
       onChange={(event, newValue) => handleNavigation(newValue)}
     >
       <StyledBottomNavigationAction label="Arcade" icon={<ArcadeIcon />} />
-      <StyledBottomNavigationAction label="Software" icon={<SoftwareIcon />} />
       <StyledBottomNavigationAction label="About" icon={<AboutIcon />} />
-      <StyledBottomNavigationAction label="Sponsors" icon={<LoyaltyIcon />} />
+      <StyledBottomNavigationAction label="Donate" icon={<LoyaltyIcon />} />
       <StyledBottomNavigationAction label="More" icon={<MoreHorizIcon />} /> {/* More button */}
     </StyledBottomNavigation>
   );
