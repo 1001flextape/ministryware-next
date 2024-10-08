@@ -94,7 +94,7 @@ const TopNav = () => {
     }
 
     if (pathname.substring(0, 5) === "/more") {
-      setValue(4)
+      setValue(3)
     }
 
   }, [router]);

@@ -36,7 +36,7 @@ const MorePage = () => {
         }}
       >
         {/* Apps Section */}
-        <Box sx={{ padding: "20px", borderRadius: 0 }}>
+        {/* <Box sx={{ padding: "20px", borderRadius: 0 }}>
           <Typography variant="h4">Apps</Typography>
           <div
             style={{
@@ -49,7 +49,7 @@ const MorePage = () => {
             Explore innovative tools
           </div>
 
-          {/* Case Study Card for Bionic Reading */}
+          {/* Case Study Card for Bionic Reading *
           <Card sx={{ marginBottom: "30px", backgroundColor: "#ffffff", boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)" }}>
             <CardContent>
               <Typography variant="h5" component="div" gutterBottom>
@@ -59,7 +59,7 @@ const MorePage = () => {
                 Bionic Reading enhances your reading speed by guiding your eyes through text with strategically bolded letters. Available as an extension for popular browsers.
               </Typography>
 
-              {/* Chrome and Firefox Store List */}
+              {/* Chrome and Firefox Store List *
               <Box sx={{ paddingBottom: "20px" }}>
                 <Typography variant="body2">Available on:</Typography>
                 <ul style={{ paddingLeft: "20px" }}>
@@ -73,7 +73,7 @@ const MorePage = () => {
               </Box>
             </CardContent>
           </Card>
-        </Box>
+        </Box> */}
 
         {/* Case Studies Section */}
         <Box sx={{ padding: "20px", borderRadius: 0 }}>

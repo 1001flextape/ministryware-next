@@ -3,6 +3,7 @@
 import React from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { styled } from '@mui/system';
+import Branding from '@/components/Branding';
 // import bananaWebp from '../../../images/dancing-banana.webp'; // Path to dancing banana webp
 
 // Background Image Styling with responsive handling
@@ -19,10 +20,10 @@ const HeroSection = styled(Box)(({ theme }) => ({
   backgroundPosition: 'right',
   // Desktop background
   backgroundImage: `url(/images/donation-hero-wide.jpg)`,
-  [theme.breakpoints.down('md')]: {
-    // Mobile/Tablet background
-    backgroundImage: `url(/images/donation-hero-compress.jpg)`,
-  },
+  // [theme.breakpoints.down('md')]: {
+  //   // Mobile/Tablet background
+  //   backgroundImage: `url(/images/donation-hero-compress.jpg)`,
+  // },
 }));
 
 // "You Matter" text styling with animation
@@ -49,6 +50,7 @@ const YouMatterText = styled(Typography)(({ theme }) => ({
 const DonateHero = () => {
   return (
     <HeroSection>
+      <Branding />
       <Container sx={{ zIndex: 2, height: "inherit" }}>
         {/* "You Matter" Text */}
         <YouMatterText className="text-flicker-in-glow">
