@@ -1,79 +1,68 @@
 "use client"
 
 import React from 'react';
-import { Box, Typography, Container, useTheme } from '@mui/material';
+import { Box, Typography, Container } from '@mui/material';
 import { styled } from '@mui/system';
-import { Typewriter } from 'react-simple-typewriter';
-import { useInView } from 'react-intersection-observer';
-import backgroundImage from '../../../../public/images/woman-prayer-hero-compress.jpg'; // Background image import
-// import Branding from '../../branding/Branding';
+import { Typewriter } from 'react-simple-typewriter'; // Import the new typewriter library
+import { useInView } from 'react-intersection-observer'; // Import Intersection Observer
+// import backgroundImage from '../../../images/woman-prayer-hero-compress.jpg'; // Use your background image
 
-// Hero section with updated desktop styling
+// Background Image Styling
 const HeroSection = styled(Box)(({ theme }) => ({
   position: 'relative',
   display: 'flex',
-  alignItems: 'center', // Align vertically center for better appearance
-  height: '100vh', // Full height for hero
+  alignItems: 'flex-start', // Align text to the left
+  height: 'calc(100vh - 50px)', // Adjust height
   backgroundImage: `url(/images/woman-prayer-hero-compress.jpg)`,
   backgroundSize: 'cover',
   backgroundPosition: 'center',
   color: '#fff',
-  textAlign: 'left',
+  textAlign: 'left', // Align text to the left
   overflow: 'hidden',
   zIndex: 1,
-  [theme.breakpoints.up('md')]: {
-    height: '250px', // Shorter height for desktop
-    justifyContent: 'center',
-  },
 }));
 
-// Styled background image with content width and blur
+// Animation for background movement
 const StyledBackground = styled(Box)(({ theme }) => ({
   position: 'absolute',
   top: 0,
   left: '50%',
-  width: 'var(--size-content)', // Limit the content width
+  width: '200%', // Make it wider to accommodate movement
   height: '100%',
+  transform: 'translateX(-50%)', // Center the image
   backgroundImage: `url(/images/woman-prayer-hero-compress.jpg)`,
   backgroundSize: 'cover',
-  backgroundPosition: 'center',
-  transform: 'translateX(-50%)', // Center the image
-  zIndex: 1,
-}));
-
-// Blurred sides (left and right) with TypeScript support
-const BlurSide = styled(Box)(({ side, theme }) => ({
-  position: 'absolute',
-  top: 0,
-  [side]: 0, // Dynamically position on left or right side
-  width: '25%', // Define the width of the blur on sides
-  height: '100%',
-  backgroundImage: `url(${backgroundImage})`,
-  backgroundSize: 'cover',
-  backgroundPosition: side === 'left' ? 'left center' : 'right center',
-  filter: 'blur(20px)', // Apply the blur effect
-  zIndex: 0,
-}));
-
-// Dark transparent box styling
-const TextBox = styled(Box)(({ theme }) => ({
-  backgroundColor: 'rgba(0, 0, 0, 0.5)', // Darker transparent background for contrast
-  padding: theme.spacing(3),
-  position: 'relative',
-  zIndex: 2, // Ensure content appears above the background
-  maxWidth: 'var(--size-content)', // Limit the width for the content
-  margin: 'auto auto 0 auto',
-  [theme.breakpoints.up('md')]: {
-    padding: theme.spacing(5),
-    textAlign: 'left', // Center the text for larger screens
-    height: '250px', // Shorter height for desktop
-    width: "50%",
-    margin: 0,
-    backgroundColor: "transparent",
-    WebkitTextStroke: '1px rgba(0, 0, 0, 0.7)', // Adjust the opacity to achieve a softer black
-    fontWeight: 'bold', // Set a high font weight
+  backgroundPosition: 'left center',
+  animation: 'moveBackground 1s ease-in-out forwards',
+  '@keyframes moveBackground': {
+    '0%': { transform: 'translateX(-50%)' }, // Start from center
+    '100%': { transform: 'translateX(-75%)' }, // Move to left
   },
 }));
+
+// Dark Transparent Box Styling
+const TextBox = styled(Box)(({ theme }) => ({
+  backgroundColor: 'rgba(0, 0, 0, 0.2)', // Dark transparent background
+  padding: theme.spacing(3),
+  position: 'absolute',
+  top: "75%",
+  left: 0,
+  right: 0,
+  display: 'flex',
+  flexDirection: 'column',
+  alignItems: 'flex-start',
+  [theme.breakpoints.up('md')]: {
+    bottom: '10%', // Position for desktop
+    left: 'auto',
+    right: 'auto',
+    borderRadius: theme.shape.borderRadius, // Optional: add rounded corners
+  },
+  [theme.breakpoints.down('md')]: {
+    bottom: '-10%', // Position for mobile/tablet
+    transform: 'translateY(-50%)',
+  },
+}));
+
 
 // Keyframes for fade-up animation
 const fadeUp = {
@@ -87,57 +76,44 @@ const fadeUpVisible = {
   transform: 'translateY(0)',
 };
 
+
 const AboutHero = () => {
-  const theme = useTheme();
-
-  // Typed hook for InView
   const { ref: paragraphRef, inView: paragraphInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.1,
+    triggerOnce: true, // Trigger only once
+    threshold: 0.1, // Trigger when 10% of the paragraph is visible
   });
-
   return (
     <HeroSection>
-      {/* Blurred sides for desktop */}
-      <BlurSide side="left" />
       <StyledBackground />
-      <BlurSide side="right" />
+      <Container sx={{
+        zIndex: 2,
+        height: "inherit",
+      }}>
+        <TextBox sx={{ minHeight: "192px", }}>
+          <Typography variant="h2" sx={{ fontWeight: 'boldest', minHeight: "77px", fontSize: { xs: '2rem', md: '3rem' } }}>
+            <Typewriter
+              words={['Software that Spreads the Good Word']}
+              loop={1}
+              typeSpeed={15}
+              deleteSpeed={30}
+              delaySpeed={500}
+            />
+          </Typography>
 
-      <Container sx={{ zIndex: 2, height: 'inherit', p: '0 !important', display: 'flex', justifyContent: 'center', flexDirection: 'column' }}>
-        {/* <Branding /> */}
-        <Box
-          style={{ maxWidth: 'var(--size-content)', margin: 'auto' }}
-          sx={{
-            maxWidth: 'var(--size-content)', // Limit the width for the content
-            margin: 'auto',
-            [theme.breakpoints.down('lg')]: {
-              margin: 'auto auto 0 auto !important', // Apply media query styling
-            },
-          }}
-        >
-          <TextBox>
-            <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: { xs: '2rem', md: '3rem' } }}>
-              <Typewriter words={['Software that Spreads the Good Word']} loop={1} typeSpeed={15} deleteSpeed={30} delaySpeed={500} />
-            </Typography>
-
-            <Typography
-              ref={paragraphRef}
-              variant="h6"
-              sx={{
-                marginTop: 2,
-                fontSize: { xs: '1rem', md: '1.25rem' },
-                maxWidth: '600px',
-                ...fadeUp,
-                ...(paragraphInView && fadeUpVisible),
-                [theme.breakpoints.up('md')]: {
-                  display: "none",
-                },
-              }}
-            >
-              MinistryWare empowers communities to share faith and connect through innovative software solutions.
-            </Typography>
-          </TextBox>
-        </Box>
+          <Typography
+            ref={paragraphRef} // Add ref to the paragraph for fade-up animation
+            variant="h6"
+            sx={{
+              marginTop: 2,
+              fontSize: { xs: '1rem', md: '1.25rem' },
+              maxWidth: '600px',
+              ...fadeUp, // Initial style
+              ...(paragraphInView && fadeUpVisible), // Apply fade-up when in view
+            }}
+          >
+            MinistryWare empowers communities to share faith and connect through innovative software solutions.
+          </Typography>
+        </TextBox>
       </Container>
     </HeroSection>
   );
