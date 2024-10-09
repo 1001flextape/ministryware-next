@@ -1,35 +1,33 @@
-"use client"
+"use client";
 
-import React from 'react';
+import React, { useEffect, useState, Suspense, lazy } from 'react';
 import { Box, Container, Typography } from '@mui/material';
 import { styled } from '@mui/system';
-import Branding from '@/components/Branding';
-// import bananaWebp from '../../../images/dancing-banana.webp'; // Path to dancing banana webp
 
-// Background Image Styling with responsive handling
+// Hero Section styling with responsive handling
 const HeroSection = styled(Box)(({ theme }) => ({
   position: 'relative',
   display: 'flex',
   alignItems: 'flex-start',
   height: 'calc(100vh - 50px)', // Adjust height
-  color: '#fff',
-  textAlign: 'left', // Align text to the left
   overflow: 'hidden',
   zIndex: 1,
-  backgroundSize: 'cover',
-  backgroundPosition: 'right',
-  // Desktop background
-  backgroundImage: `url(/images/donation-hero-wide.jpg)`,
-  // [theme.breakpoints.down('md')]: {
-  //   // Mobile/Tablet background
-  //   backgroundImage: `url(/images/donation-hero-compress.jpg)`,
-  // },
+  // Ensure the image fills the section
+  '& img': {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    zIndex: 0,
+  },
 }));
 
 // "You Matter" text styling with animation
 const YouMatterText = styled(Typography)(({ theme }) => ({
   position: 'absolute',
-  bottom: '150px', // Adjusted positioning to 300px from the top
+  bottom: '150px', // Adjusted positioning
   left: '20px',
   fontSize: '80px', // Size of the text
   color: 'white', // Fill color for the text
@@ -39,26 +37,45 @@ const YouMatterText = styled(Typography)(({ theme }) => ({
   animation: 'text-flicker-in-glow 2.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both',
 }));
 
-// Dancing banana webp (static at the bottom left)
-// const Banana = styled('img')(({ theme }) => ({
-//   position: 'absolute',
-//   bottom: '5px', // Banana placed between 5px to 25px from bottom
-//   left: '20px', // Positioned on the left side
-//   width: '80px',
-// }));
+// Lazily load the Branding component
+const Branding = lazy(() => import('@/components/Branding'));
 
 const DonateHeroMobile = () => {
+  const [highResLoaded, setHighResLoaded] = useState(false);
+
+  // Load the high-resolution image when the component mounts
+  useEffect(() => {
+    const img = new Image();
+    img.src = '/images/donation-hero-compress.jpg'; // High-resolution image
+    img.onload = () => {
+      setHighResLoaded(true); // Set the state to true when the image is loaded
+    };
+  }, []);
+
   return (
     <HeroSection>
-      <Branding />
+      {/* Low-resolution hero image */}
+      <img 
+        src="/images/donation-hero-compress-low-res.jpg" 
+        alt="Donation Hero Loading Image" 
+        // loading="lazy" 
+      />
+      {/* High-resolution hero image overlays the low-res one */}
+      {highResLoaded && (
+        <img 
+          src="/images/donation-hero-compress.jpg" 
+          alt="Donation Hero" 
+          loading="lazy" 
+        />
+      )}
+      {/* <Suspense fallback={<div>Loading...</div>}>
+        <Branding />
+      </Suspense> */}
       <Container sx={{ zIndex: 2, height: "inherit" }}>
         {/* "You Matter" Text */}
         <YouMatterText className="text-flicker-in-glow">
           You <br />Matter
         </YouMatterText>
-
-        {/* Dancing Banana */}
-        {/* <Banana src={bananaWebp} alt="Dancing Banana" /> */}
       </Container>
     </HeroSection>
   );
