@@ -138,7 +138,7 @@ const TopNav = () => {
         </Box>
 
         {/* Sign In / Account Dropdown */}
-        <Box>
+        {/* <Box>
           {isSignedIn ? (
             <>
               <IconButton
@@ -187,7 +187,7 @@ const TopNav = () => {
               Sign In
             </Button>
           )}
-        </Box>
+        </Box> */}
       </Toolbar>
     </StyledAppBar>
   );

@@ -5,7 +5,7 @@ import Layout from "../../../../layouts/frontWebsiteLayout/layout";
 import { Box, Container, Typography, Button, Breadcrumbs, Link } from '@mui/material';
 import { styled } from '@mui/system';
 import Branding from "../../../../components/Branding"
-import LeadCaptureForm from "../../../../components/LeadCaptureForm"
+// import LeadCaptureForm from "../../../../components/LeadCaptureForm"
 
 // Styled components for the case study page
 const CaseStudyContainer = styled(Container)(({ theme }) => ({
@@ -180,7 +180,7 @@ const CaseStudy = () => {
             </Typography>
           </Section>
         </CaseStudyContainer>
-        <LeadCaptureForm />
+        {/* <LeadCaptureForm /> */}
         <br />
         <br />
         <br />
