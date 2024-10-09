@@ -43,7 +43,7 @@ const DonationSectionContent = () => {
         </Typography>
         
         {/* Donate Button */}
-        <DonateButton variant="contained" href="/donate">
+        <DonateButton variant="contained" target="_blank" href="https://www.paypal.com/donate/?business=CCJ2MBTCDUZFS&no_recurring=0&item_name=Your+donation+to+Ministryware.org+funds+the+LLC%2C+homeless+resource+app%2C+and+safe+online+games+for+addiction+recovery.&currency_code=USD">
           Donate Now
         </DonateButton>
       <br />
