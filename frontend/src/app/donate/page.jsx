@@ -15,7 +15,7 @@ const DonateContainer = styled(Container)(({ theme }) => ({
   borderRadius: 0,
   padding: "0px !important",
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-  maxWidth: "var(--size-content)",
+  maxWidth: "var(--size-content) !important",
   margin: 'auto',
 }));
 
@@ -30,10 +30,6 @@ const DonatePage = () => (
     <DonateContainer>
       <DonateHero />
       <DonationSectionContent />
-      <br />
-      <br />
-      <br />
-      <br />
     </DonateContainer>
   </Layout>
 );

@@ -9,12 +9,14 @@ import Branding from '@/components/Branding';
 
 // Styled components for the about page
 const AboutContainer = styled(Container)(({ theme }) => ({
-  backgroundColor: '#fff',
+  // backgroundColor: `${theme.palette.background.default} !important`,
   padding: '0px !important',
   borderRadius: 0,
   boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
   maxWidth: 'var(--size-content)',
   margin: 'auto',
+  // clipPath: 'polygon(0 0, 100% 0, 100% 100%, 0% 90%)', // Slanted left edge
+  
 }));
 
 // Hero Section with 60% text on the left and 40% image on the right
@@ -84,7 +86,7 @@ const AboutHeroDesktop = () => {
         <LeftContent>
           <Branding />
           <TextBox>
-            <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: { xs: '1rem', md: '2rem' } }}>
+            <Typography variant="h2" sx={{ fontWeight: 'bold', fontSize: { xs: '1rem', md: '2rem' }, height: "77px" }}>
               <Typewriter
                 words={['Software that Spreads the Good Word']}
                 loop={1}
