@@ -1,13 +1,14 @@
+"use client"
+
 import React from 'react';
 import { AppBar, Toolbar, Typography, Box, useMediaQuery } from '@mui/material';
 import { styled } from '@mui/material/styles';
-import { useRouter } from 'next/router'; // For Next.js navigation
+import { useRouter } from 'next/navigation'; // For Next.js navigation
 import Image from 'next/image'; // Use Next.js Image component
-import logo from "../../../images/ministry-ware-logo.png"; // Assuming this is a local image
 import { useTheme } from '@mui/material/styles';
 
 const StyledAppBar = styled(AppBar)({
-  background: 'linear-gradient(90deg, #1AA6B7 50%, rgb(2, 45, 65) 50%)', // Split AppBar background
+  // background: 'linear-gradient(90deg, #1AA6B7 50%, rgb(2, 45, 65) 50%)', // Split AppBar background
   color: '#fff', // Ensure text is white for both colors
 });
 
@@ -35,7 +36,9 @@ const ArcadeHomeAppBar = () => {
 
   return (
     <StyledAppBar position="static">
-      <Toolbar>
+      <Toolbar sx={{
+        backgroundColor: '#1AA6B7',
+      }}>
         {/* MinistryWare section (left side) */}
         <Branding
           sx={{
@@ -47,7 +50,7 @@ const ArcadeHomeAppBar = () => {
         >
           <Box sx={{ position: 'relative', height: 30, width: 30 }}>
             <Image
-              src={logo}
+              src={"/images/ministry-ware-logo.png"}
               alt="MinistryWare logo"
               layout="fill" // Fill the parent Box
               objectFit="contain" // Maintain aspect ratio
@@ -58,28 +61,6 @@ const ArcadeHomeAppBar = () => {
           </BrandingText>
         </Branding>
 
-        {/* Arcade section (right side) */}
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            backgroundColor: 'rgb(2, 45, 65)',
-            paddingLeft: '16px',
-            cursor: 'pointer',
-          }}
-        >
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{
-              fontFamily: `"Jacquarda Bastarda 9", serif`,
-              fontSize: '32px',
-              color: 'aqua',
-            }}
-          >
-            Arcade
-          </Typography>
-        </Box>
       </Toolbar>
     </StyledAppBar>
   );
