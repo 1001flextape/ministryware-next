@@ -1,12 +1,10 @@
 "use client";
 
 import React from "react";
-import Layout from "../../../layouts/frontWebsiteLayout/layout";
+import Layout from "../../layouts/frontWebsiteLayout/layout";
 import Head from "next/head";
 import { Box, Typography, Card, CardContent, Button } from "@mui/material";
 import { useRouter } from "next/navigation";
-import LanguageIcon from "@mui/icons-material/Language"; // Placeholder for Chrome
-import FirefoxIcon from "@mui/icons-material/LocalFireDepartment"; // Using a placeholder icon for Firefox
 import Branding from "@/components/Branding";
 
 const MorePage = () => {

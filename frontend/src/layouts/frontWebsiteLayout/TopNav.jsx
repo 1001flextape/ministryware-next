@@ -86,7 +86,7 @@ const TopNav = () => {
       case '/donate':
         setValue(2);
         break;
-      case '/more/index':
+      case '/more':
         setValue(3);
         break;
       default:
@@ -128,7 +128,7 @@ const TopNav = () => {
                   router.push('/donate');
                   break;
                 case 3:
-                  router.push('/more/index');
+                  router.push('/more');
                   break;
                 default:
                   router.push('/');

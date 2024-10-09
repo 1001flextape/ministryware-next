@@ -11,12 +11,11 @@ const IndexPage = () => (
   <>
     {/* Next.js Head for metadata */}
     <Head>
-      <title>Home</title>
       <meta name="description" content="Welcome to the Arcade Home Page" />
     </Head>
 
     {/* Layout and other components */}
-    <Layout>
+    <Layout title={"Arcade"}>
       <ArcadeHomeAppBar />
       <ArcadeHomeList />
       {/* Uncomment this to enable the iframe */}

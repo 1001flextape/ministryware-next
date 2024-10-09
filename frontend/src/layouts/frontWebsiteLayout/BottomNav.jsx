@@ -90,7 +90,7 @@ const BottomNav = () => {
       '/',
       '/about',
       '/donate',
-      '/more/index', // Added the path for "More"
+      '/more', // Added the path for "More"
     ];
     router.push(paths[newValue]);
   };
