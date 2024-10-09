@@ -83,7 +83,7 @@ const InnovativeSolutions = () => {
                     sx={{ fontWeight: 'bold', marginBottom: theme.spacing(2) }}
                     delay={0.5} // First item, no delay
                   >
-                    Empowering Churches with Technology
+                    Supporting Addiction Recovery with Online Games and Mobile Resources
                   </FadeInTypography>
 
                   {/* Main paragraph with Fade-in */}
@@ -92,18 +92,18 @@ const InnovativeSolutions = () => {
                     sx={{ fontSize: '1.25rem', lineHeight: 1.75 }}
                     delay={0.7} // Slight delay for cascading effect
                   >
-                    A suite of tools designed to support churches and communities. From efficient member management to seamless event planning, our software is tailored to meet the needs of faith-based organizations.
+                 A collection of tools designed to assist individuals on their journey to recovery. From engaging online games that promote positive habits to mobile apps that offer accessible resources, our solutions are tailored to help individuals stay focused and supported.
                   </FadeInTypography>
 
                   {/* List Items with cascading fade-in */}
                   <FadeInTypography variant="body2" sx={{ marginTop: theme.spacing(2), mb: theme.spacing(1) }} delay={0.9}>
-                    • Church Management: Efficiently manage your congregation with a focus on connection and growth.
+                  <strong>Recovery-Friendly Online Games:</strong> Engage with interactive games designed to support mental wellness, helping to build positive habits and reduce addictive behaviors.
                   </FadeInTypography>
                   <FadeInTypography variant="body2" sx={{ mb: theme.spacing(1) }} delay={1.0}>
-                    • Event Planning: Organize community gatherings with ease and precision.
+                  <strong>Mobile Apps for Recovery:</strong> Access valuable recovery resources on the go, ensuring support is always within reach. These apps provide an easy, secure way to track progress and access help, reducing the risk of losing important paperwork.
                   </FadeInTypography>
                   <FadeInTypography variant="body2" sx={{ mb: theme.spacing(1) }} delay={1.1}>
-                    • Communication Tools: Stay connected with your congregation using built-in messaging features.
+                  <strong>Community Support:</strong> Stay connected with recovery groups through built-in messaging features, ensuring continuous support and accountability throughout the recovery journey.
                   </FadeInTypography>
                 </>
               )}

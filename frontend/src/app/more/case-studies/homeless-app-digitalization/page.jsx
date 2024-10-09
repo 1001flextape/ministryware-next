@@ -144,11 +144,13 @@ const CaseStudy = () => {
           <Section>
             <Typography variant="h6">Digital Solution</Typography>
             <ul>
-              <li>Centralized Data Access: Multiple nonprofits can access and update resource information.</li>
-              <li>Real-Time Updates: Information is available instantly across all devices.</li>
-              <li>User-Friendly Interface: Streamlines data entry and reduces errors.</li>
-              <li>Interoperability: Allows sharing of data between different agencies without delays.</li>
-              <li>Customizable Reports: quick adjustments and output.</li>
+              <li><strong>Unified Resource Locator:</strong> A single, user-friendly app that shows homeless individuals nearby shelters, food banks, medical services, and other essential resources.</li>
+              <li><strong>Real-Time Updates:</strong> Homeless individuals can see real-time availability for services like shelter beds, meal times, and health services, reducing uncertainty and helping them make informed decisions.</li>
+              <li><strong>Easier Access for Nonprofits:</strong> Nonprofits can quickly connect individuals to resources without the need for cumbersome paperwork. By using the app, staff can focus on immediate needs, streamlining the process of getting help to those who need it most.</li>
+              {/* <li><strong>Location-Based Assistance:</strong> The app uses location tracking to suggest the nearest available resources, reducing the time and effort homeless individuals spend searching for help.</li> */}
+              <li><strong>Paperwork Elimination:</strong> Instead of dealing with easily damaged or lost paperwork, nonprofits can instantly share and update resource information in the app, allowing for faster referrals and improved service delivery.</li>
+              <li><strong>Offline Access:</strong> Even when internet access is limited, the app can store information offline and update automatically when a connection is re-established.</li>
+              <li><strong>Custom Alerts:</strong> Notifications can alert users to available services, changes in shelter hours, or upcoming community events, ensuring that both individuals and nonprofits are always up to date.</li>
             </ul>
           </Section>
 

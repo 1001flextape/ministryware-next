@@ -75,7 +75,7 @@ const TopNav = () => {
 
   // Update tab selection based on the current path
   useEffect(() => {
-    console.log('!!!!!pathname', pathname, router);
+
     switch (pathname) {
       case '/':
         setValue(0);
@@ -92,11 +92,6 @@ const TopNav = () => {
       default:
         setValue(null);
     }
-
-    if (pathname.substring(0, 5) === "/more") {
-      setValue(3)
-    }
-
   }, [router]);
 
   // Conditionally render the top nav only on desktop
