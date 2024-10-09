@@ -50,6 +50,7 @@ const CaseStudy = () => {
     // Create an iframe element
     const iframe = document.createElement('iframe');
     iframe.src = iframeSourceUrl;
+    iframe.allow = "fullscreen" // Allow fullscreen in iframe
     iframe.style.position = 'fixed';
     iframe.style.top = '0';
     iframe.style.left = '0';

@@ -83,7 +83,9 @@ const BouncePage = () => {
   }, []);
 
   const handleFullScreen = () => {
+    const iframeWrapper = document.getElementById("iframe-wrapper");
     const iframe = document.getElementById("bounce-iframe");
+  
     if (iframe.requestFullscreen) {
       iframe.requestFullscreen();
     } else if (iframe.mozRequestFullScreen) {
@@ -92,8 +94,19 @@ const BouncePage = () => {
       iframe.webkitRequestFullscreen();
     } else if (iframe.msRequestFullscreen) {
       iframe.msRequestFullscreen();
+    } else {
+      // Simulate fullscreen on iOS Safari
+      iframeWrapper.style.position = "fixed";
+      iframeWrapper.style.top = "0";
+      iframeWrapper.style.left = "0";
+      iframeWrapper.style.width = "100vw";
+      iframeWrapper.style.height = "100vh";
+      iframeWrapper.style.zIndex = "1000";
+      iframeWrapper.style.backgroundColor = "#000";
     }
   };
+  
+  
 
   return (
     <>
@@ -132,6 +145,7 @@ const BouncePage = () => {
               id="bounce-iframe"
               src={iframeSrc}
               width="100%"
+              allow="fullscreen" // Allow fullscreen in iframe
               style={{
                 height: "600px",
                 border: "none",
